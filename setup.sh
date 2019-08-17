@@ -1,14 +1,6 @@
 #!/bin/bash
 
 
-#add langoeg in python
-export LANGUAGE=en_US.UTF-8
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-locale-gen en_US.UTF-8
-dpkg-reconfigure locales
-
-
 hostname=$(cat /etc/hostname)
 sed -i "3i\127.0.1.1 $hostname" /etc/hosts
 
@@ -21,6 +13,14 @@ sudo apt install -y python3-pip
 
 
 sudo apt install -y build-essential python3-dev python2.7-dev libldap2-dev libsasl2-dev slapd ldap-utils python-tox lcov valgrind
+
+#add langoeg in python
+export LANGUAGE=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+locale-gen en_US.UTF-8
+dpkg-reconfigure locales
+
 
 sudo adduser --system --home=/opt/odoo --group odoo
 
