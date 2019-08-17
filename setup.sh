@@ -20,12 +20,12 @@ sudo apt -y upgrade
 sudo apt install -y python3-pip
 
 
-sudo apt install build-essential python3-dev python2.7-dev libldap2-dev libsasl2-dev slapd ldap-utils python-tox lcov valgrind
+sudo apt install -y build-essential python3-dev python2.7-dev libldap2-dev libsasl2-dev slapd ldap-utils python-tox lcov valgrind
 
 sudo adduser --system --home=/opt/odoo --group odoo
 
 #Install PostgreSQL:
-sudo apt install postgresql
+sudo apt install -y postgresql
 sudo su - postgres
 createuser --createdb --username postgres --no-createrole --no-superuser --pwprompt odoo12
 exit
@@ -39,7 +39,7 @@ sudo apt install -y node-less
 
 sudo wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.1/wkhtmltox-0.12.1_linux-trusty-amd64.deb
 
-sudo apt install git
+sudo apt install -y git
 
 sudo su - odoo -s /bin/bash
 git clone https://www.github.com/odoo/odoo --depth 1 --branch 12.0 --single-branch
