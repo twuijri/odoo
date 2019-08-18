@@ -42,7 +42,7 @@ sudo wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.1/wk
 sudo apt install -y git
 
 sudo su - odoo -s /bin/bash
-git clone https://www.github.com/odoo/odoo --depth 1 --branch 12.0 --single-branch
+git clone https://www.github.com/odoo/odoo /opt/odoo --depth 1 --branch 12.0 --single-branch
 exit
 
 
